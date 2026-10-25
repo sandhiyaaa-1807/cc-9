@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Authenticity Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎓 Internship Authenticity Checker</h1>
+    <p>Check Internship Offers Before Applying</p>
+
+    <div class="card">
+        <h2>🔍 Enter Internship Details</h2>
+
+        <input type="text" id="company"
+               placeholder="Company Name">
+
+        <input type="url" id="website"
+               placeholder="Company Website (https://...)">
+
+        <input type="email" id="email"
+               placeholder="Recruiter Email">
+
+        <select id="fee">
+            <option value="no">No Registration Fee</option>
+            <option value="yes">Registration Fee Required</option>
+        </select>
+
+        <textarea id="message"
+                  placeholder="Paste Internship Offer Message"></textarea>
+
+        <button onclick="checkInternship()">
+            Check Internship
+        </button>
+    </div>
+
+    <div class="card" id="resultCard" style="display:none;">
+        <h2>📊 Verification Result</h2>
+
+        <h3 id="riskLevel"></h3>
+        <h2 id="riskScore"></h2>
+
+        <div id="reasons"></div>
+    </div>
+
+    <div class="card">
+        <h2>📋 Verification History</h2>
+        <div id="history"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
